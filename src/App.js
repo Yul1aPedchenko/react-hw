@@ -17,7 +17,7 @@ const secondNum = 5;
 // 8
 const colors = ["red", "blue", "green"];
 const markUp = colors.map((color) => {
-  return <li>{color}</li>;
+  return <li key={color}>{color}</li>;
 });
 
 function App() {
