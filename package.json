@@ -1,7 +1,7 @@
 {
   "name": "react-hw",
   "version": "0.1.0",
-  "homepage": "https://github.com/Yul1aPedchenko/react-hw",
+  "homepage": "https://yul1apedchenko.github.io/react-hw",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
