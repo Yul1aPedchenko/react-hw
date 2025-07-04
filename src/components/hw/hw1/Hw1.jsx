@@ -9,17 +9,14 @@ import {
 
 export const Hw1 = () => {
   return (
-    <li className="hw__item">
-      <h2>Homework 1 </h2>
-      <div className="hw__wrap">
-        <h3 className="name">{name}</h3>
-        <img src={img.URL} alt={img.Alt} />
-        <a href={favWebsite.url}>{favWebsite.name}</a>
-        <p>
-          {firstNum} + {secondNum} = {firstNum + secondNum}
-        </p>
-        <ColorList />
-      </div>
-    </li>
+    <div>
+      <h3>{name}</h3>
+      <img src={img.URL} alt={img.Alt} />
+      <a href={favWebsite.url}>{favWebsite.name}</a>
+      <p>
+        {firstNum} + {secondNum} = {firstNum + secondNum}
+      </p>
+      <ColorList />
+    </div>
   );
 };
