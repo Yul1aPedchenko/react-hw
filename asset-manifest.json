@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Yul1aPedchenko/react-hw/static/css/main.947c4d3e.css",
-    "main.js": "/Yul1aPedchenko/react-hw/static/js/main.6af94af2.js",
-    "index.html": "/Yul1aPedchenko/react-hw/index.html",
-    "main.947c4d3e.css.map": "/Yul1aPedchenko/react-hw/static/css/main.947c4d3e.css.map",
-    "main.6af94af2.js.map": "/Yul1aPedchenko/react-hw/static/js/main.6af94af2.js.map"
+    "main.css": "/react-hw/static/css/main.947c4d3e.css",
+    "main.js": "/react-hw/static/js/main.6af94af2.js",
+    "index.html": "/react-hw/index.html",
+    "main.947c4d3e.css.map": "/react-hw/static/css/main.947c4d3e.css.map",
+    "main.6af94af2.js.map": "/react-hw/static/js/main.6af94af2.js.map"
   },
   "entrypoints": [
     "static/css/main.947c4d3e.css",
