@@ -1,8 +1,8 @@
 export const Statistics = ({stats}) => [
-  <section class="statistics">
-    <h2 class="title">Upload stats</h2>
+  <section className="statistics">
+    <h2 className="title">Upload stats</h2>
 
-    <ul class="stat-list">
+    <ul className="stat-list">
       {stats.map((stat) => (
           <li className="item" key={stat.id}>
             <span className="label">{stat.label}</span>

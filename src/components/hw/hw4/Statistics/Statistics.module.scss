@@ -1,0 +1,43 @@
+.stat {
+  background-color: white;
+  border: 1px solid burlywood;
+  margin-bottom: 30px;
+  &__title {
+    text-transform: uppercase;
+    padding: 20px 35px;
+    font-size: 36px;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+    width: 20%;
+  }
+  &__item:nth-child(1) {
+    background-color: rgb(127, 217, 255);
+  }
+  &__item:nth-child(2) {
+    background-color: rgb(219, 127, 255);
+  }
+  &__item:nth-child(3) {
+    background-color: rgb(255, 127, 138);
+  }
+  &__item:nth-child(4) {
+    background-color: rgb(127, 255, 182);
+  }
+  &__item:nth-child(5) {
+    background-color: rgb(219, 255, 127);
+  }
+  &__label {
+    font-size: 30px;
+  }
+  &__prc {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
