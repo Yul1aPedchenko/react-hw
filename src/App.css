@@ -1,4 +1,4 @@
-@import-normalize;
+@import 'normalize.css';
 
 h1,
 h2,
@@ -24,7 +24,7 @@ button {
   cursor: pointer;
 }
 .faq-list {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .faq-title {

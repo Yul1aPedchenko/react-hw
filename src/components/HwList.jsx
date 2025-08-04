@@ -4,11 +4,15 @@ import { Hw1 } from './hw/hw1/Hw1';
 import { Hw2 } from "./hw/hw2/Hw2";
 import { Hw3 } from "./hw/hw3/Hw3";
 import { Hw4 } from "./hw/hw4/Hw4";
+import { Hw5 } from "./hw/hw5/Hw5";
 
 export const HwList = () => {
   return (
     <div className="faq-list">
       <h1 className="faq-title">Homeworks</h1>
+      <FaqItem question="Homework 5">
+        <Hw5 />
+      </FaqItem>
       <FaqItem question="Homework 4">
         <Hw4 />
       </FaqItem>
