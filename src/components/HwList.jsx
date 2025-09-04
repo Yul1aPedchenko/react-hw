@@ -7,11 +7,15 @@ import { Hw4 } from "./hw/hw4/Hw4";
 import { Hw5 } from "./hw/hw5/Hw5";
 import { Hw7 } from "./hw/hw7/Hw7";
 import { Hw8 } from "./hw/hw8/Hw8";
+import { Hw10 } from "./hw/hw10/Hw10";
 
 export const HwList = () => {
   return (
     <div className="faq-list">
       <h1 className="faq-title">Homeworks</h1>
+      <FaqItem question="Homework 10">
+        <Hw10 />
+      </FaqItem>
       <FaqItem question="Homework 8">
         <Hw8 />
       </FaqItem>
