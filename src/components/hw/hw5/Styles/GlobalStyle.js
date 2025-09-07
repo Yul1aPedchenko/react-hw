@@ -1,15 +1,1 @@
-import { createGlobalStyle } from 'styled-components';
-
-export const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-  }
-
-  .faq-a {
-    background-color: #fdf3cfff;
-    padding: 20px;
-  }
-`;
+//? GlobalStyle was added in src/components/common/Style/GlobalStyle

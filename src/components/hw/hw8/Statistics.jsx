@@ -1,12 +1,13 @@
+import { List, ListItem } from "./Style/Statistics.js";
+
 export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
-    <ul>
-      <li>Good: {good}</li>
-      <li>Neutral: {neutral}</li>
-      <li>Bad: {bad}</li>
-      <li>Total: {total}</li>
-      <li>Positive feedback: {positivePercentage}%</li>
-    </ul>
+    <List>
+      <ListItem>Good: {good}</ListItem>
+      <ListItem>Neutral: {neutral}</ListItem>
+      <ListItem>Bad: {bad}</ListItem>
+      <ListItem>Total: {total}</ListItem>
+      <ListItem>Positive feedback: {positivePercentage}%</ListItem>
+    </List>
   );
 };
-

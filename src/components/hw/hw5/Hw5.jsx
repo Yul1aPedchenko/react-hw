@@ -5,7 +5,6 @@ import { recipes } from "../../../dataBase/hw5/data.js";
 export const Hw5 = () => {
   return (
     <>
-      <GlobalStyle />
       <CardWrap>
         {recipes.map((recipe) => {
           return <RecipeCard key={recipe.id} recipe={recipe}></RecipeCard>;

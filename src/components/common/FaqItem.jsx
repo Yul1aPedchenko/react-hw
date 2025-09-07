@@ -1,17 +1,17 @@
 import React, { useState } from "react";
+import { Item, Question, Answer } from "./Style/FaqItem";
+import { FiPlus, FiMinus } from "react-icons/fi";
 
-function FaqItem({ question, children }) {
+export const FaqItem = ({ question, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <div onClick={() => setIsOpen(!isOpen)} className="faq-q">
+    <Item>
+      <Question onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
         <h2>{question}</h2>
-        <p>Click here</p>
-      </div>
-      {isOpen && <div className="faq-a">{children}</div>}
-    </div>
+        {isOpen ? <FiMinus size={20} /> : <FiPlus size={20} />}
+      </Question>
+      {isOpen && <Answer>{children}</Answer>}
+    </Item>
   );
-}
-
-export default FaqItem;
+};

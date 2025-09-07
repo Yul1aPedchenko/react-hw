@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Wrapper } from "./Style/Hw8";
 import { FeedbackOptions } from "./FeedbackOptions";
 import { Statistics } from "./Statistics";
 import { Section } from "./Section";
@@ -34,7 +35,7 @@ export const Hw8 = () => {
       const positive = this.countPositiveFeedbackPercentage();
 
       return (
-        <>
+        <Wrapper>
           <Section title="Please leave a feedback">
             <FeedbackOptions
               options={["good", "neutral", "bad"]}
@@ -55,7 +56,7 @@ export const Hw8 = () => {
               <Notification message="There is no feedback" />
             )}
           </Section>
-        </>
+        </Wrapper>
       );
     }
   }

@@ -1,33 +1,29 @@
-export const Profile = ({username, tag, location, avatar, stats}) => {
-  return (
-    <>
-      <div className="profile">
-        <div className="description">
-          <img
-            src={avatar}
-            alt="User avatar"
-            className="avatar"
-          />
-          <p className="name">{username}</p>
-          <p className="tag">@{tag}</p>
-          <p className="location">{location}</p>
-        </div>
+import { ProfileWrapper, Description, Avatar, Name, Tag, Location, Stats, StatItem, Label,Quantity } from "./Style/Profile";
 
-        <ul className="stats">
-          <li>
-            <span className="label">Followers</span>
-            <span className="quantity">{stats.followers}</span>
-          </li>
-          <li>
-            <span className="label">Views</span>
-            <span className="quantity">{stats.views}</span>
-          </li>
-          <li>
-            <span className="label">Likes</span>
-            <span className="quantity">{stats.likes}</span>
-          </li>
-        </ul>
-      </div>
-    </>
+export const Profile = ({ username, tag, location, avatar, stats }) => {
+  return (
+    <ProfileWrapper>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
+
+      <Stats>
+        <StatItem>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
+        </StatItem>
+        <StatItem>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
+        </StatItem>
+        <StatItem>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
+        </StatItem>
+      </Stats>
+    </ProfileWrapper>
   );
 };

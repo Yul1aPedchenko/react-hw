@@ -1,14 +1,16 @@
-export const Statistics = ({stats}) => [
-  <section className="statistics">
-    <h2 className="title">Upload stats</h2>
+import { Section, Title, StatList, Item, Label, Percentage } from "./Style/Statistics";
 
-    <ul className="stat-list">
+export const Statistics = ({ stats }) => (
+  <Section>
+    <Title>Upload stats</Title>
+
+    <StatList>
       {stats.map((stat) => (
-          <li className="item" key={stat.id}>
-            <span className="label">{stat.label}</span>
-            <span className="percentage">{stat.percentage}%</span>
-          </li>
-        ))}
-    </ul>
-  </section>
-];
+        <Item key={stat.id}>
+          <Label>{stat.label}</Label>
+          <Percentage>{stat.percentage}%</Percentage>
+        </Item>
+      ))}
+    </StatList>
+  </Section>
+);
