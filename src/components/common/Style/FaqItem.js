@@ -9,7 +9,7 @@ export const Item = styled.article`
   overflow: hidden;
   background: linear-gradient(135deg, #f5f3ff 0%, #e0e7ff 100%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 1600px;
+  max-width: 1400px;
 
 
   &:hover {
