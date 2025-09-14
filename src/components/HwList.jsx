@@ -16,7 +16,7 @@ export const HwList = () => {
       <GlobalStyle />
       <div>
         <h1 style={{ textAlign: "center", margin: "20px" }}> Homeworks </h1>
-        <FaqItem question="Homework 10">
+        <FaqItem question="Homework 10/12">
           <Hw10 />
         </FaqItem>
         <FaqItem question="Homework 8">

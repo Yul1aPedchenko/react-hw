@@ -14,15 +14,33 @@ export class AddContact extends Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
-    const { name, number } = this.state;
-    this.props.onSubmit({
-      id: Date.now().toString(),
-      name: name,
-      number: number,
-    });
-    this.setState({ name: "", number: "" });
-  };
+  e.preventDefault();
+  const { name, number } = this.state;
+
+  const nameRegex = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
+  const numberRegex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+
+  if (!nameRegex.test(name)) {
+    alert("Invalid name! Use only letters, apostrophes, dashes, and spaces.");
+    return;
+  }
+
+  if (!numberRegex.test(number)) {
+    alert(
+      "Invalid phone number! It must contain digits and can include spaces, dashes, parentheses, and can start with +"
+    );
+    return;
+  }
+
+  this.props.onSubmit({
+    id: Date.now().toString(),
+    name: name,
+    number: number,
+  });
+
+  this.setState({ name: "", number: "" });
+};
+
   render() {
     return (
       <FormWrapper onSubmit={this.handleSubmit}>
