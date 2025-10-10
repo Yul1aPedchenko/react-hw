@@ -11,6 +11,7 @@ import { Hw8 } from "./hw/hw8/Hw8";
 import { Hw10 } from "./hw/hw10/Hw10";
 import { Hw14 } from "./hw/hw14/Hw14";
 import { Hw16 } from "./hw/hw16/Hw16";
+import { Hw17 } from "./hw/hw17/Hw17";
 
 export const HwList = () => {
   return (
@@ -18,6 +19,9 @@ export const HwList = () => {
       <GlobalStyle />
       <div style={{ position: "relative" }}>
         <h1 style={{ textAlign: "center", margin: "20px" }}> Homeworks </h1>
+         <FaqItem question="Homework 17">
+          <Hw17 />
+        </FaqItem>
         <FaqItem question="Homework 16">
           <Hw16 />
         </FaqItem>
