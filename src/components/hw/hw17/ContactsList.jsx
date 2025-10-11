@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Item, DeleteButton } from "./Styles/ContactsList";
 
 export const ContactsList = ({contacts, deleteContact}) => {
