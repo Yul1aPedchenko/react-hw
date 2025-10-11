@@ -9,26 +9,30 @@ export const Hw17 = () => {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    const savedContacts = localStorage.getItem("contacts");
+    const savedContacts = localStorage.getItem("contactsState");
     if (savedContacts) {
       setContacts(JSON.parse(savedContacts));
     }
   }, []);
+
   useEffect(() => {
-    return localStorage.setItem("contacts", JSON.stringify(contacts));
+    if (contacts.length > 0) {
+      localStorage.setItem("contactsState", JSON.stringify(contacts));
+    }
   }, [contacts]);
 
   const addContact = (newContact) => {
-    const isInContacts = contacts.find(
-      (contact) =>
+    const isInContacts = contacts.find((contact) => {
+      return (
         contact.name.toLowerCase().trim() ===
-        newContact.name.toLowerCase().trim()
-    );
+        newContact.name.toLowerCase().trim() || contact.number.trim() === newContact.number.trim()
+      );
+    });
 
     if (!isInContacts) {
-      setContacts([contacts, newContact]);
+      setContacts([...contacts, newContact]);
     } else {
-      alert(`${newContact.name} is already in your contacts`);
+      alert(`${newContact.name} or ${newContact.number} is already in your contacts`);
     }
   };
   const deleteContact = (id) => {

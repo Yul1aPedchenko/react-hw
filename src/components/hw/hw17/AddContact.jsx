@@ -16,8 +16,7 @@ export const AddContact = ({ onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const nameRegex =
-      /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
+    const nameRegex = /^[a-zA-Zа-яА-Я0-9]+(([' -][a-zA-Zа-яА-Я0-9 ])?[a-zA-Zа-яА-Я0-9]*)*$/;
     const numberRegex =
       /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
 
@@ -50,7 +49,6 @@ export const AddContact = ({ onSubmit }) => {
         <Input
           type="text"
           name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           onChange={handleChange}
           placeholder="Name"
@@ -63,7 +61,6 @@ export const AddContact = ({ onSubmit }) => {
         <Input
           type="tel"
           name="number"
-          pattern="^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           onChange={handleChange}
           placeholder="Phone number"
