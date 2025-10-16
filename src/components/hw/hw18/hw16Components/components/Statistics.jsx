@@ -1,5 +1,5 @@
-import { List, ListItem } from "../Style/Statistics.js";
 import { useFeedback } from "../../FeedbackContext";
+import { List, ListItem } from "../Style/Statistics";
 
 export const Statistics = () => {
   const { good, neutral, bad, total, positive } = useFeedback();

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Wrapper } from "./Style/Hw16";
 import { FeedbackOptions } from "./components/FeedbackOptions";
 import { Statistics } from "./components/Statistics";
@@ -11,36 +11,39 @@ export const Hw16 = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
+  const goodBtnRef = useRef(null); 
+
+  useEffect(() => {
+    if (goodBtnRef.current) {
+      goodBtnRef.current.focus();
+    }
+  }, []);
+
   const handleChange = (type) => {
     const setters = {
-      good: () => setGood((prev) => prev + 1),
-      neutral: () => setNeutral((prev) => prev + 1),
-      bad: () => setBad((prev) => prev + 1),
+      good: () => setGood(good + 1),
+      neutral: () => setNeutral(neutral + 1),
+      bad: () => setBad(bad + 1),
     };
     setters[type]();
   };
 
   const countTotalFeedback = () => good + neutral + bad;
-
-  const countPositiveFeedbackPercentage = () => {
-    const total = countTotalFeedback();
-    return total > 0 ? Math.floor((good / total) * 100) : 0;
-  };
-
   const total = countTotalFeedback();
-  const positive = countPositiveFeedbackPercentage();
+  const positive = total > 0 ? Math.floor((good / total) * 100) : 0;
 
-  const contextValue = {
+  const value = {
     good,
     neutral,
     bad,
     total,
     positive,
     handleChange,
+    goodBtnRef, 
   };
 
   return (
-    <FeedbackContext.Provider value={contextValue}>
+    <FeedbackContext.Provider value={value}>
       <Wrapper>
         <Section title="Please leave a feedback">
           <FeedbackOptions />
