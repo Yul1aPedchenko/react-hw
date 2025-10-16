@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-hw/static/css/main.3fa110b4.css",
-    "main.js": "/react-hw/static/js/main.eaa2f256.js",
+    "main.js": "/react-hw/static/js/main.a426cf23.js",
     "static/media/my_photo.jpeg": "/react-hw/static/media/my_photo.2d21384db1a1a1f84df0.jpeg",
     "index.html": "/react-hw/index.html",
     "main.3fa110b4.css.map": "/react-hw/static/css/main.3fa110b4.css.map",
-    "main.eaa2f256.js.map": "/react-hw/static/js/main.eaa2f256.js.map"
+    "main.a426cf23.js.map": "/react-hw/static/js/main.a426cf23.js.map"
   },
   "entrypoints": [
     "static/css/main.3fa110b4.css",
-    "static/js/main.eaa2f256.js"
+    "static/js/main.a426cf23.js"
   ]
 }
