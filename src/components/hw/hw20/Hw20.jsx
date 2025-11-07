@@ -17,7 +17,7 @@ export const Hw20 = () => {
     setQuery(newQuery);
     setPage(1);
     setImages([]);
-  }, []);
+  }, [setImages]);
 
   const handleLoadMore = useCallback(() => {
     setPage((prev) => prev + 1);
