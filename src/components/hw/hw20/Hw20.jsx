@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { Searchbar } from "./hwComponents/Searchbar";
 import { ImageGallery } from "./hwComponents/ImageGallery";
 import { Button } from "./hwComponents/Button";
