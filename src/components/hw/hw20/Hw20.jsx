@@ -4,39 +4,14 @@ import { ImageGallery } from "./hwComponents/ImageGallery";
 import { Button } from "./hwComponents/Button";
 import { Loader } from "./hwComponents/Loader";
 import { Modal } from "./hwComponents/Modal";
+import { usePixabaySearch } from "./hooks/usePixabaySearch";
 
-const API_KEY = process.env.REACT_APP_PIXABAY_API_KEY;
-const API_URL = "https://pixabay.com/api/";
-const PER_PAGE = 12;
-export const Hw19 = () => {
+export const Hw20 = () => {
   const [query, setQuery] = useState("");
-  const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
   const [largeImageURL, setLargeImageURL] = useState(null);
-  const [hasMore, setHasMore] = useState(false);
 
-  const fetchImages = useCallback(async () => {
-    if (!query) return;
-    setIsLoading(true);
-
-    try {
-      const response = await fetch(`${API_URL}?q=${query}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=${PER_PAGE}&page=${page}`);
-      const data = await response.json();
-
-      setImages((prev) => (page === 1 ? data.hits : [...prev, ...data.hits]));
-
-      setHasMore(data.totalHits > page * PER_PAGE);
-    } catch (error) {
-      console.error("Error fetching images:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [query, page]);
-
-  useEffect(() => {
-    fetchImages();
-  }, [fetchImages]);
+  const  { images, isLoading, hasMore, setImages } = usePixabaySearch(query,page);
 
   const handleSearchSubmit = useCallback((newQuery) => {
     setQuery(newQuery);
